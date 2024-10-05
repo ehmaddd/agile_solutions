@@ -1,0 +1,808 @@
+body, .main-container {
+  margin: 0;
+  padding: 0;
+}
+
+.letter-img {
+  width: 20px;
+}
+
+.main-container {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: #e66d00;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-contact-div {
+  display: flex;
+  align-items: center;
+}
+
+.top-contact-div a {
+  color: white;
+  text-decoration: none;
+}
+
+.letter-img {
+  margin-right: 4px;
+}
+
+.get-started a {
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  margin-left: 20px;
+  margin-right: 3.5rem;
+}
+
+.dark-nav {
+  display: flex;
+  align-items: center;
+  background-color: #213645;
+  padding: 10px 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  font-weight: lighter;
+  justify-content: space-between;
+}
+
+.light-nav {
+  align-items: center;
+  background-color: white;
+  padding: 10px 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  font-weight: lighter;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  margin-left: 1.5rem;
+}
+
+.dark-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  left: 2rem;
+  margin-top: 1rem;
+}
+
+.dark-nav-list li {
+  margin-right: 20px;
+}
+
+.dark-nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 0.85rem;
+  transition: background-color 0.3s, border 0.3s;
+  border-radius: 20px;
+}
+
+.dark-nav-list li a.active {
+  border: 1px solid #e66d00;
+  background-color: #e66d00;
+  color: white;
+  border-radius: 20px;
+}
+
+.dark-nav-list li a:hover {
+  border: 1px solid #e66d00;
+  background-color: #e66d00;
+  border-radius: 20px;
+}
+
+.light-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  left: 2rem;
+  margin-top: 1rem;
+}
+
+.light-nav-list li {
+  margin-right: 20px;
+}
+
+.light-nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0.6rem 0.85rem;
+  transition: background-color 0.3s, border 0.3s;
+  border-radius: 20px;
+}
+
+.light-nav-list li a.active {
+  border: 1px solid #e66d00;
+  background-color: #e66d00;
+  color: white;
+  border-radius: 20px;
+}
+
+.light-nav-list li a:hover {
+  border: 1px solid #e66d00;
+  background-color: #e66d00;
+  border-radius: 20px;
+}
+
+.hero-carousel-container {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-carousel-container .carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-carousel-container .carousel-item.active {
+  opacity: 1;
+}
+
+/* Hide carousel controls by default */
+.hero-carousel-container .carousel-control-prev, .carousel-control-next {
+  display: none;
+}
+
+/* Show controls only when hovering over the carousel */
+.hero-carousel-container:hover .carousel-control-prev,
+.hero-carousel-container:hover .carousel-control-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel control circle for the buttons */
+.hero-carousel-container .carousel-control-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Style for the arrow icons inside the buttons */
+.hero-carousel-container .carousel-control-prev-icon, .carousel-control-next-icon {
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+}
+
+/* Image preview inside the circular button (hidden by default) */
+.hero-carousel-container .carousel-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Show the image preview on button hover */
+.hero-carousel-container .carousel-control-circle:hover .carousel-preview {
+  opacity: 1;
+}
+
+/* Hover effect to change the button's background */
+.hero-carousel-container .carousel-control-circle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact2-div {
+  display: flex;
+  flex-direction: row;
+  background-color: #e66d00;
+  padding: 1.5rem 3.5rem;
+  align-items: center;
+}
+
+.contact-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: white;
+  width: 80%;
+  margin-right: 3rem;
+}
+
+.callback-link {
+  background-color: #212331;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e66d00;
+  border-radius: 11px;
+  padding: 0.6rem 0.75rem;
+  color: white;
+}
+
+.our-services {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  padding-bottom: 4rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Set card to have a height of 100% or specific value if needed */
+  transition: transform 0.3s ease;
+  border: 0;
+  border-radius: 0;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0; /* Set top to 0 so it takes the entire height */
+  background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform: translateY(100%); /* Initially hidden below the card */
+  height: 100%; /* Takes the full height of the card */
+}
+
+.overlay {
+  background-color: #212331; /* Keeps the same background color */
+}
+
+/* When hovering on the card, the overlay slides up */
+.card:hover .overlay {
+  transform: translateY(0); /* Move the overlay into view */
+  background-color: #212331;
+  opacity: 0.7;
+}
+
+/* Hover text inside the overlay */
+.hover-text {
+  padding-bottom: 8.9rem;
+  height: 100%; /* Set height to 100% to take the entire overlay */
+}
+
+.hover-text h5 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.75rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Center the text vertically */
+}
+
+.container {
+  background-color: #1e1e1e;
+  margin-top: -2rem;
+}
+
+.color-white {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.color-orange {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+  color: #e66d00;
+}
+
+.our-services {
+  padding-top: 2.5rem;
+  text-align: center;
+}
+
+.service-desc {
+  color: grey;
+}
+
+.hr {
+  width: 8rem;
+  margin: auto;
+}
+
+.orange-div {
+  height: 3px;
+  background-color: #e66d00;
+}
+
+.our-benefits {
+  background-color: #333333;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.benefit-desc {
+  color: grey;
+  font-size: 1rem;
+}
+
+.benifit-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.benifit-grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.benifit-grid-item h5 {
+  color: #b3b3b3;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.benifit-grid-item p {
+  color: #72776a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.about-div {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-values {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-us {
+  margin: auto;
+  padding: 3rem;
+}
+
+.about-us h5 {
+  color: #b3b3b3;
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.about-us h6 {
+  color: #b3b3b3;
+  font-size: 1.25rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.mission-values {
+  margin-top: 0.5rem;
+}
+
+.about-us p {
+  color: #6e7477;
+  font-size: 0.95rem;
+}
+
+.values {
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.about-div img {
+  margin-right: 4rem;
+  width: 30rem;
+}
+
+.know-more {
+  background-color: #e66d00;
+  padding: 0.2rem 0.7rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.client-div {
+  margin: auto;
+  text-align: center;
+  background-image: url('./images/bg-img.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+}
+
+.client-div p {
+  color: white;
+  font-size: 1.1rem;
+  width: 70%;
+  margin: 2rem auto;
+  height: 3rem;
+}
+
+.client-hr {
+  border: none;
+  height: 3px;
+  background-color: #e66d00;
+  width: 50px;
+  margin: 20px auto;
+}
+
+.client-div .carousel-item img {
+  width: 10%;
+  object-fit: cover;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.client-div .carousal-indicators {
+  margin-left: 5rem;
+}
+
+.client-div .carousel-indicators li {
+  background-color: #e66d00;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.client-div .carousel-indicators .active {
+  background-color: #fff;
+  opacity: 1;
+}
+.logo-scroll {
+  overflow: hidden;
+  background-color: #f8f9fa; /* Adjust the background color as needed */
+  padding: 20px 0; /* Add some padding */
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for scrolling effect */
+}
+
+.logo-container img {
+  margin-right: 30px; /* Spacing between logos */
+  height: 50px; /* Set a height for the logos */
+}
+
+.meet-team {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.meet-team .card-body {
+  padding: 0.5rem;
+  background-color: #333333;
+}
+
+.meet-team p {
+  color: #6e7477;
+  font-size: 0.89rem;
+}
+
+.team-img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.orange-line {
+  position: absolute;
+  border-left: 4px solid #e66d00;
+  bottom: 80px;
+  width: 17.3rem;
+  height: 40px;
+  right: -19.5rem;
+  transition: right 0.3s ease;
+  background-color: #1f2131;
+  color: white;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  padding-left: 0.5rem;
+}
+
+.card:hover .orange-line {
+  right: -1rem;
+}
+
+.card:hover .name-overlay {
+  right: 10px;
+}
+
+.contact-div .grid-container {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+}
+
+.contact-div .box {
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-bg-div {
+  background-image: url('./images/pencil-img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  background-attachment: fixed;
+  overflow: hidden; 
+}
+
+.contact-div h4 {
+  color: white;
+  width: 10rem;
+}
+
+.contact-img {
+  width: 25rem;
+  margin-right: -50px;
+  position: relative;
+}
+
+.contact-bg-div {
+  width: 100%;
+}
+
+.contact-div {
+  position: relative;
+  display: flex;
+  padding: 2rem 2rem;
+  overflow: hidden;
+}
+
+.contact-div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 39, 54, 0.85);
+  z-index: 0;
+}
+
+.contact-div > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-grid-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-box {
+  flex: 0.25;
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+.right-box {
+  flex: 0.75;
+  padding: 20px;
+  color: white;
+}
+
+.contact-bottom-form {
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.contact-bottom-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.contact-bottom-form .form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.contact-bottom-form .form-group:last-child {
+  margin-right: 0;
+}
+
+.contact-bottom-form input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(169, 169, 169, 0.5);
+  background-color: #1c212c;
+}
+
+.contact-bottom-form textarea {
+  width: 97%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(169, 169, 169, 0.5);
+  background-color: #1c212c;
+}
+
+.contact-bottom-form .btn {
+  background-color: #e66d00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.contact-bottom-form .send-btn {
+  display: block;
+  width: auto;
+  margin-left: 0;
+}
+
+.btn:hover {
+  background-color: #b35500;
+}
+
+.contact-img {
+  width: 23rem;
+}
+
+.contact-hr {
+  width: 8rem;
+  display: block;
+  margin: 0 auto 1rem 0;
+}
+
+.footer-bg-div {
+  background-image: url('./images/pencil-img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 45vh;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.footer-top-box {
+  text-align: left;
+  padding: 20px;
+}
+
+.footer-top-box table {
+  width: 100%;
+  color: #b3b3b3;
+}
+
+.footer-top-box h5 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-top-box a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.footer-top-box td {
+  text-align: left;
+  padding: 5px 0;
+}
+
+.footer-grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  padding-left: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 4.5rem;
+  color: white;
+}
+
+.footer-grid-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.footer-grid-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-grid-container .top-box {
+  color: white;
+  text-align: left;
+  padding: 20px;
+}
+
+.footer-intro {
+  margin-top: 1rem;
+  color: gainsboro;
+  text-align: left;
+}
+
+.footer-bottom-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 4rem;
+  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
